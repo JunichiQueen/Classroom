@@ -1,4 +1,4 @@
-package com.qa.persistence.repository;
+package com.qa.persistence.domain;
 
 import java.awt.List;
 
@@ -16,8 +16,17 @@ public class Classroom {
 	private int id;
 	private String trainer;
 	
-	@OneToMany( targetEntity=Trainee.class )
-	private List traineeList;
+	//@OneToMany( targetEntity=Trainee.class )
+	//private List traineeList;
+	
+	public Classroom(int id, String trainer) {
+		this.id = id;
+		this.trainer = trainer;
+	}
+	
+	public Classroom() {
+		
+	}
 
 	public int getId() {
 		return id;
@@ -35,12 +44,17 @@ public class Classroom {
 		this.trainer = trainer;
 	}
 
-	public List getTraineeList() {
-		return traineeList;
-	}
+	//public List getTraineeList() {
+	//	return traineeList;
+	//}
 
-	public void setTraineeList(List traineeList) {
-		this.traineeList = traineeList;
-	}
+	//public void setTraineeList(List traineeList) {
+	//	this.traineeList = traineeList;
+	//}
+	
+	/*@Override
+	public String toString() {
+		return "id=" + id + ", trainer=" + trainer;
+	}*/
 
 }

@@ -1,4 +1,4 @@
-package com.qa.persistence.repository;
+package com.qa.persistence.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
