@@ -28,5 +28,12 @@ public class ClassroomController {
 		return classroomService.createClassroom(classroom);
 	}
 	
+	@Path("/deleteClassroom/{id}")
+	@GET
+	@Produces( "application/json" )
+	public String deleteClassroom(@PathParam("id") int id) {
+		return classroomService.deleteClassroom(id);
+	}
+	
 }
 

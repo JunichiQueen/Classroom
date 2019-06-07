@@ -37,6 +37,12 @@ public class ClassroomMapRepo implements ClassroomRepository {
 	}
 
 
+	public String deleteClassroom(int ClassroomID) {
+		accountMap.remove((Integer) ClassroomID);
+		return "You have deleted a Classroom";
+	}
+
+
 
 
 	

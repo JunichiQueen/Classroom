@@ -17,6 +17,10 @@ public class ClassroomServiceImpl implements ClassroomService{
 		return classroomDBRepo.createClassroom(classroom);
 	}
 	
+	public String deleteClassroom(int id) {
+		return classroomDBRepo.deleteClassroom(id);
+	}
+	
 	
 
 }

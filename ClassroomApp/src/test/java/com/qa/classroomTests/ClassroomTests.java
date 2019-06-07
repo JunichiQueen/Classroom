@@ -64,5 +64,14 @@ public class ClassroomTests {
 		System.out.println(classroomToCreate);
 		assertEquals(1, classMapRepo.getAccountMap().size(), 2);
 	}
+	
+	/*
+	@Test
+	public void deleteClassroomTest() {
+		classMapRepo.getAccountMap().put(1, class1);
+		classMapRepo.getAccountMap().put(2, class2);
+		classMapRepo.getAccountMap().remove(class2);
+		assertTrue(classMapRepo.getAccountMap().size() == 1);
+	}*/
 
 }
