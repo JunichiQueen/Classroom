@@ -30,6 +30,15 @@ public class ClassroomMapRepo implements ClassroomRepository {
 	}
 
 
+	public String createClassroom(String classroom) {
+		Classroom newClass = util.getObjectForJSON(classroom, Classroom.class);
+		accountMap.put(newClass.getId(), newClass);
+		return "";
+	}
+
+
+
+
 	
 
 }
