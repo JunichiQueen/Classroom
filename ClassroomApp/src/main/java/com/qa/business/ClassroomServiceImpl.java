@@ -12,6 +12,10 @@ public class ClassroomServiceImpl implements ClassroomService{
 	public String getAllClassrooms() {
 		return classroomDBRepo.getAllClassrooms();
 	}
+
+	public String createClassroom(String classroom) {
+		return classroomDBRepo.createClassroom(classroom);
+	}
 	
 	
 

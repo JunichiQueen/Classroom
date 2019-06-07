@@ -3,6 +3,7 @@ package com.qa.rest;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
 import com.qa.business.ClassroomService;
@@ -18,8 +19,14 @@ public class ClassroomController {
 	@Produces( "application/json" )
 	public String getAllClassrooms() {
 		return classroomService.getAllClassrooms();
-
-}
+		}
+	
+	@Path("/createClassroom/{classroom}")
+	@GET
+	@Produces( "application/json" )
+	public String createClassroom(@PathParam("classroom") String classroom) {
+		return classroomService.createClassroom(classroom);
+	}
 	
 }
 
