@@ -42,6 +42,17 @@ public class ClassroomDBRepo implements ClassroomRepository {
 		em.remove(em.find(Classroom.class, ClassroomID));
 		return null;
 	}
+
+	@Override
+	public String updateClassroom(int ClassroomID, String trainer) {
+		Classroom newClass = new Classroom();
+		Classroom oldClass = em.find(Classroom.class, ClassroomID);
+		if (oldClass != null){
+			oldClass.setTrainer(trainer);
+			em.persist(oldClass);
+		}
+		return null;
+	}
 	
 	
 

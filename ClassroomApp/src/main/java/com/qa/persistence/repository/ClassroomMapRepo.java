@@ -3,11 +3,13 @@ package com.qa.persistence.repository;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.enterprise.inject.Alternative;
 import javax.inject.Inject;
 
 import com.qa.persistence.domain.Classroom;
 import com.qa.util.JSONUtil;
 
+@Alternative
 public class ClassroomMapRepo implements ClassroomRepository {
 	
 	Map<Integer, Classroom> accountMap = new HashMap<Integer, Classroom>();
@@ -42,6 +44,14 @@ public class ClassroomMapRepo implements ClassroomRepository {
 		return "You have deleted a Classroom";
 	}
 
+
+	@Override
+	public String updateClassroom(int ClassroomID, String trainer) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
 
 
 
