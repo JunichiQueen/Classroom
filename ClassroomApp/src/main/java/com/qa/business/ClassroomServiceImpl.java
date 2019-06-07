@@ -20,6 +20,12 @@ public class ClassroomServiceImpl implements ClassroomService{
 	public String deleteClassroom(int id) {
 		return classroomDBRepo.deleteClassroom(id);
 	}
+
+	
+	public String updateClassroom(int ClassroomID, String trainer) {
+		classroomDBRepo.updateClassroom(ClassroomID, trainer);
+		return null;
+	}
 	
 	
 
